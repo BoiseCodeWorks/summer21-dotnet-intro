@@ -12,6 +12,8 @@ namespace Intro
             Console.Clear();
             var g = new Game();
             g.Start();
+            Console.ResetColor();
+            Console.Clear();
         }
 
         private static void IntroDemo()
