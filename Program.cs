@@ -1,11 +1,71 @@
 ﻿using System;
+using System.Collections.Generic;
 using Intro.Utils;
 
 namespace Intro
 {
+
+    class Cat
+    {
+        public string Name { get; set; }
+        public Cat(string name)
+        {
+            Name = name;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
+        {
+
+            // var cats = new List<Cat>();
+            // var garfield = new Cat("Garfield");
+            // cats.Add(garfield);
+            // cats.Remove(garfield);
+            // cats.RemoveAt(0);
+            // var cats = []
+
+
+            var users = new Dictionary<string, string>();
+
+            users.Add("joverall", "testing123!");
+            users.Add("jimmyTester", "!notTesting1");
+
+
+            // { joverall: 'testing123!', jimmyTester: "!notTesting1" }
+
+
+            System.Console.WriteLine("welcome please login");
+            var username = Console.ReadLine();
+
+            if (users.ContainsKey(username))
+            {
+                System.Console.WriteLine("What is your password? ");
+                var password = Console.ReadLine();
+
+                users.TryGetValue(username, out string savedPassword);
+
+                if (savedPassword == password)
+                {
+                    System.Console.WriteLine("welcome you have succesfully logged in");
+                }
+                else
+                {
+                    System.Console.WriteLine("Wrong password");
+                }
+            }
+            else
+            {
+                System.Console.WriteLine("invalid username");
+            }
+
+
+
+
+        }
+
+        private static void StartGame()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.DarkCyan;
