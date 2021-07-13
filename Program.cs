@@ -18,15 +18,12 @@ namespace Intro
     {
         static void Main(string[] args)
         {
-
             // var cats = new List<Cat>();
             // var garfield = new Cat("Garfield");
             // cats.Add(garfield);
             // cats.Remove(garfield);
             // cats.RemoveAt(0);
             // var cats = []
-
-
             var users = new Dictionary<string, string>();
 
             users.Add("joverall", "testing123!");
